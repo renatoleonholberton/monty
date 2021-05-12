@@ -80,9 +80,6 @@ void err_malloc();
 void err_pint(int line_number);
 void err_pop(int line_number);
 
-/* strings */
-int _strlen(char *str);
-
 /* utils */
 int is_number(char *str);
 char *num_to_str(int num);
