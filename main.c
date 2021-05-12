@@ -1,6 +1,6 @@
 #include "monty.h"
 
-manager_t manager = {NULL, NULL, NULL, 0, NULL};
+manager_t manager = {NULL, NULL, 0, NULL};
 
 /**
  * main - Entry point
