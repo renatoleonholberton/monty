@@ -6,7 +6,7 @@ void parse_input_file()
 {
 	int line_number = 1;
 
-	while (getline(&manager.buff, &manager.buff_size, manager.file) != EOF)
+	while (getline(&(manager.buff), &(manager.buff_size), manager.file) != EOF)
 		parse_line(line_number++);
 }
 
@@ -16,7 +16,7 @@ void parse_line(int line_number)
 	char *tkn = strtok(manager.buff, "\n");
 	
 	tkn = strtok(manager.buff, " ");
-	if (tkn == NULL || *tkn == '\n')
+	if (tkn == NULL || *tkn == '\n') /* blank line */
 		return;
 
 	if (strcmp(tkn, "push") == 0)
@@ -25,11 +25,11 @@ void parse_line(int line_number)
 		if (tkn == NULL || !is_number(tkn))
 			err_push_arg(line_number);
 		
-		insert_end(&(manager.stack_head), &(manager.stack_tail), atoi(tkn));
+		insert_end(&(manager.stack_head), atoi(tkn));
 		return;
 	}
 
-	valid_opcode = handle_opcode(manager, tkn, line_number);
+	valid_opcode = handle_opcode(tkn, line_number);
 	if (!valid_opcode)
 		err_invalid_opcode(tkn, line_number);
 }
