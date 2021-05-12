@@ -11,7 +11,7 @@ int is_number(char *str)
 	while (*str != '\0')
 	{
 		if (*str < '0' || *str > '9')
-			return (1);
+			return (0);
 		str++;
 	}
 
