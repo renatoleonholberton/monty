@@ -1,7 +1,8 @@
 #include "monty.h"
 
-void insert_end(stack_t **head_addrs, stack_t **tail_addrs, int value)
+void insert_end(stack_t **head, int value)
 {
+	stack_t *curr;
 	stack_t *new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)
@@ -10,14 +11,16 @@ void insert_end(stack_t **head_addrs, stack_t **tail_addrs, int value)
 	new_node->prev = NULL;
 	new_node->next = NULL;
 
-	if (*head_addrs == NULL)
+	if (*head == NULL)
 	{
-		*head_addrs = new_node;
-		*tail_addrs = new_node;
+		*head = new_node;
 		return;
 	}
 
-	new_node->prev = *tail_addrs;
-	(*tail_addrs)->next = new_node;
-	*tail_addrs = new_node;
+	curr = *head;
+	while (curr->next != NULL)
+		curr = curr->next;
+
+	curr->next = new_node;
+	new_node->prev = curr;
 }
