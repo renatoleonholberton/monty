@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void print_all(stack_t **stack_tail, unsigned int line_number)
+void print_all(stack_t **stack_tail, unsigned int __attribute__((unused))line_number)
 {
 	stack_t *tail;
 
