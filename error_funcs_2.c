@@ -6,10 +6,10 @@ void err_pint(int line_number)
 
 	write(2, "L", 1);
 	msg = num_to_str(line_number);
-	write(2, msg, _strlen(msg));
+	write(2, msg, strlen(msg));
 	free(msg);
 	msg = ": can't pint, stack empty\n";
-	write(2, msg, _strlen(msg));
+	write(2, msg, strlen(msg));
 	cleanup();
 	exit(EXIT_FAILURE);
 }
@@ -21,10 +21,10 @@ void err_pop(int line_number)
 
 	write(2, "L", 1);
 	msg = num_to_str(line_number);
-	write(2, msg, _strlen(msg));
+	write(2, msg, strlen(msg));
 	free(msg);
 	msg = ": can't pop an empty stack\n";
-	write(2, msg, _strlen(msg));
+	write(2, msg, strlen(msg));
 	cleanup();
 	exit(EXIT_FAILURE);
 }
