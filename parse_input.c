@@ -13,8 +13,9 @@ void parse_input_file()
 void parse_line(int line_number)
 {
 	int valid_opcode;
-	char *tkn = strtok(manager.buff, " ");
-
+	char *tkn = strtok(manager.buff, "\n");
+	
+	tkn = strtok(manager.buff, " ");
 	if (tkn == NULL || *tkn == '\n')
 		return;
 
