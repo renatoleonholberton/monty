@@ -45,7 +45,6 @@ typedef struct instruction_s
 typedef struct manager_s
 {
 	stack_t *stack_head;
-	stack_t *stack_tail;
 
 	char *buff;
 	size_t buff_size;
@@ -58,14 +57,15 @@ void parse_input_file();
 void parse_line(int line_number);
 
 /* functions */
-int handle_opcode(manager_t manager, char *opcode, int line_num);
+int handle_opcode(char *opcode, int line_num);
 
 /* stack functions */
-void insert_end(stack_t **head_addrs, stack_t **tail_addrs, int value);
+void insert_end(stack_t **head, int value);
 
 /* opcode functions */
-void print_all(stack_t **stack_tail, unsigned int line_number);
-void pint(stack_t **stack_tail, unsigned int line_number);
+void print_all(stack_t **head, unsigned int line_number);
+void pint(stack_t **head, unsigned int line_number);
+void pop(stack_t **head, unsigned int line_number);
 
 /* memory */
 void cleanup();
@@ -78,6 +78,7 @@ void err_invalid_opcode(char *opcode, int line_number);
 void err_malloc();
 /* errors 2 */
 void err_pint(int line_number);
+void err_pop(int line_number);
 
 /* strings */
 int _strlen(char *str);
