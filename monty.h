@@ -65,6 +65,7 @@ void insert_end(stack_t **head_addrs, stack_t **tail_addrs, int value);
 
 /* opcode functions */
 void print_all(stack_t **stack_tail, unsigned int line_number);
+void pint(stack_t **stack_tail, unsigned int line_number);
 
 /* memory */
 void cleanup();
@@ -75,6 +76,8 @@ void err_open_file(char *);
 void err_push_arg(int line_number);
 void err_invalid_opcode(char *opcode, int line_number);
 void err_malloc();
+/* errors 2 */
+void err_pint(int line_number);
 
 /* strings */
 int _strlen(char *str);
