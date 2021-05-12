@@ -31,5 +31,4 @@ void free_stack()
 	}
 
 	manager.stack_head = NULL;
-	manager.stack_tail = NULL;
 }
