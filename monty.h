@@ -1,7 +1,10 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -32,5 +35,52 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct manager_s - main stuct to handle all operations
+ *
+ * Description: structure containing all info to manage
+ * all operations needed to be performed
+ */
+typedef struct manager_s
+{
+	stack_t *stack_head;
+	stack_t *stack_tail;
+
+	char *buff;
+	size_t buff_size;
+
+	FILE *file;
+} manager_t;
+
+/* parsers */
+void parse_input_file();
+void parse_line(int line_number);
+
+/* functions */
+int handle_opcode(manager_t manager, char *opcode, int line_num);
+
+/* stack functions */
+void insert_end(stack_t **head_addrs, stack_t **tail_addrs, int value);
+
+/* opcode functions */
+void print_all(stack_t **stack_tail, unsigned int line_number);
+
+/* memory */
+void cleanup();
+
+/* errors */
+void err_argc();
+void err_open_file(char *);
+void err_push_arg(int line_number);
+void err_invalid_opcode(char *opcode, int line_number);
+void err_malloc();
+
+/* strings */
+int _strlen(char *str);
+
+/* utils */
+int is_number(char *str);
+char *num_to_str(int num);
 
 #endif
