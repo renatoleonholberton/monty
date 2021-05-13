@@ -38,10 +38,10 @@ void err_pop(int line_number)
 
 
 /**
- * err_pop - Prints an error to stderr
+ * err_swap - Prints an error to stderr
  * @line_number: Number of instruction line
 */
-void err_pop(int line_number)
+void err_swap(int line_number)
 {/* L<line_number>: can't swap, stack too short */
 	char *msg;
 
