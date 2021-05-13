@@ -28,6 +28,18 @@ void parse_line(int line_number)
 	if (*tkn == '#' || strcmp(tkn, "nop") == 0)
 		return;
 
+	/* Handle operation mode: stack or queue */
+	if (strcmp(tkn, "stack") == 0)
+	{
+		manager.mode = MODE_STACK;
+		return;
+	}
+	else if (strcmp(tkn, "queue") == 0)
+	{
+		manager.mode = MODE_QUEUE;
+		return;
+	}
+
 	if (strcmp(tkn, "push") == 0)
 	{
 		tkn = strtok(NULL, " ");
