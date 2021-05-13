@@ -8,7 +8,7 @@
 void print_all(stack_t **head, unsigned int __attribute__((unused))line_number)
 {
 	stack_t *curr;
-
+	/*heloo*/
 	if (head == NULL || *head == NULL)
 		return;
 
