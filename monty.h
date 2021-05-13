@@ -84,6 +84,8 @@ void pchar(stack_t **head, unsigned int line_number);
 void pstr(stack_t **head, unsigned int line_number);
 void rotl(stack_t **head, unsigned int line_number);
 void rotr(stack_t **head, unsigned int line_number);
+/* aditional functions to handle opcodes */
+void print_queue(stack_t **head, unsigned int line_num);
 
 /* memory */
 void cleanup(void);

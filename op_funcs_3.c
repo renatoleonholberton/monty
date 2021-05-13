@@ -75,3 +75,23 @@ void rotr(stack_t **head, unsigned int __attribute__((unused)) line_number)
 	first->prev = last;
 	last->next = first;
 }
+
+/**
+ * print_queue - Print the stack as a queue
+ * @head: Double pointer to head node
+ * @line_num: Number of instruction line
+*/
+void print_queue(stack_t **head, unsigned int __attribute__((unused)) line_num)
+{
+	stack_t *curr;
+
+	if (head == NULL || *head == NULL)
+		return;
+
+	curr = *head;
+	while (curr != NULL)
+	{
+		printf("%d\n", curr->n);
+		curr = curr->next;
+	}
+}
