@@ -74,6 +74,7 @@ void err_add(int line_number)
 
 /**
  * err_line - Prints an error to stderr
+ * @msg: String message to be printed along line number
  * @line_number: Number of instruction line
 */
 void err_line(char *msg, int line_number)
