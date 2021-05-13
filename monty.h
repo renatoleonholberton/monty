@@ -42,6 +42,7 @@ typedef struct instruction_s
  * @buff: Pointer to Buffer
  * @buff_size: Length of buffer
  * @file: Pointer to file struct
+ * @mode: Stack's mode of operation
  *
  * Description: structure containing all info to manage
  * all operations needed to be performed
@@ -49,12 +50,15 @@ typedef struct instruction_s
 typedef struct manager_s
 {
 	stack_t *stack_head;
-
 	char *buff;
 	size_t buff_size;
-
 	FILE *file;
+	char mode;
 } manager_t;
+
+/* Macros */
+#define MODE_STACK 's'
+#define MODE_QUEUE 'q'
 
 /* parsers */
 void parse_input_file(void);

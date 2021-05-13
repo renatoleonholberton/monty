@@ -16,6 +16,7 @@ int main(int argc, char **argv)
 	manager.buff = NULL;
 	manager.buff_size = 0;
 	manager.file = NULL;
+	manager.mode = MODE_STACK;
 
 	manager.file = fopen(argv[1], "r");
 	if (manager.file == NULL)
