@@ -71,7 +71,9 @@ void pop(stack_t **head, unsigned int line_number)
 }
 
 /**
- * swap - Swaps the top 2 elemts of the stack
+ * swap - Swaps the top 2 elementts of the stack
+ * @head: Double pointer to the stack's head
+ * @line_number: Number of line instruction
 */
 void swap(stack_t **head, unsigned int line_number)
 {
@@ -87,4 +89,25 @@ void swap(stack_t **head, unsigned int line_number)
 	temp = curr->n;
 	curr->n = prev->n;
 	prev->n = temp;
+}
+
+/**
+ * add - Adds the top 2 elementts of the stack
+ * @head: Double pointer to the stack's head
+ * @line_number: Number of line instruction
+*/
+void add(stack_t **head, unsigned int line_number)
+{
+	stack_t *curr, *prev = NULL;
+
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
+		err_add(line_number);
+
+	for (curr = *head; curr->next != NULL; curr = curr->next)
+		prev = curr;
+
+	prev->n = prev->n + curr->n;
+	prev->next = NULL;
+	curr->prev = NULL;
+	free(curr);
 }
