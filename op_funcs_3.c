@@ -48,6 +48,7 @@ void rotl(stack_t **head, unsigned int __attribute__((unused)) line_number)
 	prev->next = NULL;
 	curr->prev = NULL;
 	curr->next = *head;
+	(*head)->prev = curr;
 	*head = curr;
 }
 
