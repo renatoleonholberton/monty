@@ -85,6 +85,7 @@ void err_malloc(void);
 void err_pint(int line_number);
 void err_pop(int line_number);
 void err_swap(int line_number);
+void err_add(int line_number);
 
 /* utils */
 int is_number(char *str);

@@ -36,12 +36,29 @@ void err_pop(int line_number)
 	exit(EXIT_FAILURE);
 }
 
-
 /**
  * err_swap - Prints an error to stderr
  * @line_number: Number of instruction line
 */
 void err_swap(int line_number)
+{/* L<line_number>: can't swap, stack too short */
+	char *msg;
+
+	write(2, "L", 1);
+	msg = num_to_str(line_number);
+	write(2, msg, strlen(msg));
+	free(msg);
+	msg = ": can't swap, stack too short\n";
+	write(2, msg, strlen(msg));
+	cleanup();
+	exit(EXIT_FAILURE);
+}
+
+/**
+ * err_add - Prints an error to stderr
+ * @line_number: Number of instruction line
+*/
+void err_add(int line_number)
 {/* L<line_number>: can't swap, stack too short */
 	char *msg;
 
