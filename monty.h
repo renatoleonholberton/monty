@@ -81,12 +81,6 @@ void err_argc(void);
 void err_open_file(char *);
 void err_invalid_opcode(char *opcode, int line_number);
 void err_malloc(void);
-/* errors 2 */
-void err_push_arg(int line_number);
-void err_pint(int line_number);
-void err_pop(int line_number);
-void err_swap(int line_number);
-void err_add(int line_number);
 void err_line(char *msg, int line_number);
 
 /* utils */
