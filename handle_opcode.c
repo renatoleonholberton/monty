@@ -23,6 +23,7 @@ int handle_opcode(char *opcode, int line_num)
 		{"pchar", pchar},
 		{"pstr", pstr},
 		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 
