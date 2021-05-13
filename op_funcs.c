@@ -69,3 +69,22 @@ void pop(stack_t **head, unsigned int line_number)
 	curr->prev = NULL;
 	free(curr);
 }
+
+/**
+ * swap - Swaps the top 2 elemts of the stack
+*/
+void swap(stack_t **head, unsigned int line_number)
+{
+	int temp;
+	stack_t *curr, *prev = NULL;
+
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
+		err_swap(line_number);
+
+	for (curr = *head; curr->next != NULL; curr = curr->next)
+		prev = curr;
+
+	temp = curr->n;
+	curr->n = prev->n;
+	prev->n = temp;
+}

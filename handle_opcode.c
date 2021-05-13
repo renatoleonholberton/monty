@@ -14,6 +14,7 @@ int handle_opcode(char *opcode, int line_num)
 		{"pall", print_all},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
