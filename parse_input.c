@@ -57,4 +57,3 @@ void parse_line(int line_number)
 	if (!valid_opcode)
 		err_invalid_opcode(tkn, line_number);
 }
-/*end*/
