@@ -20,6 +20,7 @@ int handle_opcode(char *opcode, int line_num)
 		{"div", div_op},
 		{"mul", mul_op},
 		{"mod", mod_op},
+		{"pchar", pchar},
 		{NULL, NULL}
 	};
 

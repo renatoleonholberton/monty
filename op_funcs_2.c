@@ -89,3 +89,25 @@ void mod_op(stack_t **head, unsigned int line_number)
 	curr->prev = NULL;
 	free(curr);
 }
+
+/**
+ * pchar - Prints the value at the top of the stack as ascii char
+ * @head: Double pointer to head node
+ * @line_number: Number of instruction line
+*/
+void pchar(stack_t **head, unsigned int line_number)
+{
+	stack_t *curr;
+
+	if (head == NULL || *head == NULL)
+		err_line(": can't pchar, stack empty\n", line_number);
+
+	curr = *head;
+	while (curr->next != NULL)
+		curr = curr->next;
+
+	if (curr->n < 0 || curr->n > 127)
+		err_line(": can't pchar, value out of range\n", line_number);
+
+	printf("%c\n", curr->n);
+}
