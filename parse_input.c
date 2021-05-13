@@ -8,12 +8,7 @@ void parse_input_file(void)
 	int line_number = 1;
 
 	while (getline(&(manager.buff), &(manager.buff_size), manager.file) != EOF)
-	{
-		/* Treat line as a comment if the firat char is '#' */
-		if ((manager.buff)[0] == '#')
-			continue;
 		parse_line(line_number++);
-	}
 }
 
 /**
@@ -24,6 +19,10 @@ void parse_line(int line_number)
 {
 	int valid_opcode;
 	char *tkn = strtok(manager.buff, "\n");
+
+	/* Treat line as a comment if the first char is '#' */
+	if (*tkn == '#')
+		return;
 
 	tkn = strtok(manager.buff, " ");
 	if (tkn == NULL || *tkn == '\n') /* blank line */
