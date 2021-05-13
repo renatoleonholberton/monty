@@ -9,7 +9,7 @@
 | 4. add | Implement the add opcode. |
 | 5. nop | Implement the nop opcode. |
 | Advanced |                         |
-| 2. pop | Implement the pop opcode. |
+| 10. comments | Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (dont do anything). |
 | 2. pop | Implement the pop opcode. |
 | 2. pop | Implement the pop opcode. |
 | 2. pop | Implement the pop opcode. |
