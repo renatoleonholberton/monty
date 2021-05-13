@@ -65,3 +65,27 @@ void mul_op(stack_t **head, unsigned int line_number)
 	curr->prev = NULL;
 	free(curr);
 }
+
+/**
+ * mod_op - Computes the modulo of the second top by the stack's top element
+ * @head: Double pointer to head node
+ * @line_number: Number of instruction line
+*/
+void mod_op(stack_t **head, unsigned int line_number)
+{
+	stack_t *curr, *prev = NULL;
+
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
+		err_line(": can't mod, stack too short\n", line_number);
+
+	for (curr = *head; curr->next != NULL; curr = curr->next)
+		prev = curr;
+
+	if (curr->n == 0)
+		err_line(": division by zero\n", line_number);
+
+	prev->n = prev->n % curr->n;
+	prev->next = NULL;
+	curr->prev = NULL;
+	free(curr);
+}

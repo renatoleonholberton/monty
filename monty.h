@@ -75,6 +75,7 @@ void add(stack_t **head, unsigned int line_number);
 void sub(stack_t **head, unsigned int line_number);
 void div_op(stack_t **head, unsigned int line_number);
 void mul_op(stack_t **head, unsigned int line_number);
+void mod_op(stack_t **head, unsigned int line_number);
 
 /* memory */
 void cleanup(void);
