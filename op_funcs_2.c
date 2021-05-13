@@ -22,11 +22,11 @@ void sub(stack_t **head, unsigned int line_number)
 }
 
 /**
- * div - Subtracts the top 2 elements of the stack
+ * div_op - Subtracts the top 2 elements of the stack
  * @head: Double pointer to head node
  * @line_number: Number of instruction line
 */
-void div(stack_t **head, unsigned int line_number)
+void div_op(stack_t **head, unsigned int line_number)
 {
 	stack_t *curr, *prev = NULL;
 

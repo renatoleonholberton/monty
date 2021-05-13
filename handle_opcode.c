@@ -17,7 +17,7 @@ int handle_opcode(char *opcode, int line_num)
 		{"swap", swap},
 		{"add", add},
 		{"sub", sub},
-		{"div", div},
+		{"div", div_op},
 		{NULL, NULL}
 	};
 
