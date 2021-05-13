@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern manager_t manager;
-
 void free_stack(void);
 
 /**

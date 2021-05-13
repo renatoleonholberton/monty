@@ -88,4 +88,7 @@ void err_pop(int line_number);
 int is_number(char *str);
 char *num_to_str(int num);
 
+/* Global var */
+manager_t manager;
+
 #endif

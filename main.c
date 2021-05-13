@@ -1,7 +1,5 @@
 #include "monty.h"
 
-manager_t manager = {NULL, NULL, 0, NULL};
-
 /**
  * main - Entry point
  * @argc: Number of arguments passed to the program
@@ -13,6 +11,11 @@ int main(int argc, char **argv)
 {
 	if (argc != 2)
 		err_argc();
+
+	manager.stack_head = NULL;
+	manager.buff = NULL;
+	manager.buff_size = 0;
+	manager.file = NULL;
 
 	manager.file = fopen(argv[1], "r");
 	if (manager.file == NULL)

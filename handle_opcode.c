@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern manager_t manager;
-
 /**
  * handle_opcode - Receives an opcode and performs an operation based on it
  * @opcode: String representing a monty opcode

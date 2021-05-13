@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern manager_t manager;
-
 /**
  * parse_input_file - Parses the file line by line
 */
