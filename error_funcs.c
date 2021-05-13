@@ -1,6 +1,9 @@
 #include "monty.h"
 
-void err_argc()
+/**
+ * err_argc - Prints an error message to stderr
+*/
+void err_argc(void)
 {
 	char *msg = "USAGE: monty file\n";
 
@@ -8,6 +11,10 @@ void err_argc()
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * err_open_file - Prints an error message to stderr
+ * @file: String representing a file path
+*/
 void err_open_file(char *file)
 {
 	char *msg = "Error: Can't open file ";
@@ -18,6 +25,10 @@ void err_open_file(char *file)
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * err_push_arg - Prints an error message to stderr
+ * @line_number: Number of instruction line
+*/
 void err_push_arg(int line_number)
 {/* L<line_number>: usage: push integer */
 	char *msg;
@@ -32,6 +43,11 @@ void err_push_arg(int line_number)
 	exit(EXIT_FAILURE);
 }
 
+/**
+ * err_invalid_opcode - Prints an error message to stderr
+ * @opcode: String representing an monty opcode
+ * @line_number: Number of instruction line
+*/
 void err_invalid_opcode(char *opcode, int line_number)
 {/* L<line_number>: unknown instruction <opcode> */
 	char *msg;
@@ -48,10 +64,13 @@ void err_invalid_opcode(char *opcode, int line_number)
 	exit(EXIT_FAILURE);
 }
 
-void err_malloc()
+/**
+ * err_malloc - Prints an error message to stderr
+*/
+void err_malloc(void)
 {
 	char *msg = "Error: malloc failed\n";
-	
+
 	write(2, msg, strlen(msg));
 	cleanup();
 	exit(EXIT_FAILURE);
