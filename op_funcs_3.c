@@ -29,3 +29,25 @@ void pstr(stack_t **head, unsigned int __attribute__((unused)) line_number)
 
 	printf("\n");
 }
+
+/**
+ * rotl - Rotates the stack by one element
+ * @head: Double pointer to head node
+ * @line_number: Number of instruction line
+*/
+void rotl(stack_t **head, unsigned int __attribute__((unused)) line_number)
+{
+	stack_t *curr, *prev;
+
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
+		return;
+
+	for (curr = *head; curr->next != NULL; curr = curr->next)
+		prev = curr;
+
+	prev->next = NULL;
+	curr->prev = NULL;
+	curr->next = *head;
+	*head = curr;
+}
+
