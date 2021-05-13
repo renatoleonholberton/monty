@@ -71,3 +71,20 @@ void err_add(int line_number)
 	cleanup();
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * err_line - Prints an error to stderr
+ * @line_number: Number of instruction line
+*/
+void err_line(char *msg, int line_number)
+{/* L<line_number>: msg */
+	char *line_str = num_to_str(line_number);
+
+	write(2, "L", 1);
+	write(2, line_str, strlen(line_str));
+	write(2, msg, strlen(msg));
+
+	free(line_str);
+	cleanup();
+	exit(EXIT_FAILURE);
+}
