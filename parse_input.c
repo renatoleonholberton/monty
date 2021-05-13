@@ -25,10 +25,7 @@ void parse_line(int line_number)
 		return;
 
 	/* Treat line as a comment if the first char is '#' */
-	if (*tkn == '#')
-		return;
-
-	if (strcmp(tkn, "nop") == 0)
+	if (*tkn == '#' || strcmp(tkn, "nop") == 0)
 		return;
 
 	if (strcmp(tkn, "push") == 0)
