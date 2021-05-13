@@ -2,9 +2,12 @@
 
 extern manager_t manager;
 
-void free_stack();
+void free_stack(void);
 
-void cleanup()
+/**
+ * cleanup - Frees allocated memory
+*/
+void cleanup(void)
 {
 	/* free buffer */
 	free(manager.buff);
@@ -14,10 +17,13 @@ void cleanup()
 	fclose(manager.file);
 }
 
-void free_stack()
+/**
+ * free_stack - Frees the memory allocated by the stack
+*/
+void free_stack(void)
 {
 	stack_t *curr, *prev = NULL;
-	
+
 	curr = manager.stack_head;
 
 	while (curr != NULL)
