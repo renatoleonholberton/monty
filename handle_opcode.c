@@ -16,6 +16,7 @@ int handle_opcode(char *opcode, int line_num)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 
