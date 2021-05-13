@@ -33,7 +33,7 @@ void pint(stack_t **head, unsigned int line_number)
 	stack_t *curr;
 
 	if (head == NULL || *head == NULL)
-		err_pint(line_number);
+		err_line(": can't pint, stack empty\n", line_number);
 
 	curr = *head;
 	while (curr->next != NULL)
@@ -52,7 +52,7 @@ void pop(stack_t **head, unsigned int line_number)
 	stack_t *curr, *prev = NULL;
 
 	if (head == NULL || *head == NULL)
-		err_pop(line_number);
+		err_line(": can't pop an empty stack\n", line_number);
 
 	if ((*head)->next == NULL)
 	{
@@ -81,7 +81,7 @@ void swap(stack_t **head, unsigned int line_number)
 	stack_t *curr, *prev = NULL;
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
-		err_swap(line_number);
+		err_line(": can't swap, stack too short\n", line_number);
 
 	for (curr = *head; curr->next != NULL; curr = curr->next)
 		prev = curr;
@@ -101,7 +101,7 @@ void add(stack_t **head, unsigned int line_number)
 	stack_t *curr, *prev = NULL;
 
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
-		err_add(line_number);
+		err_line(": can't add, stack too short\n", line_number);
 
 	for (curr = *head; curr->next != NULL; curr = curr->next)
 		prev = curr;

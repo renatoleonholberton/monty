@@ -31,7 +31,7 @@ void parse_line(int line_number)
 	{
 		tkn = strtok(NULL, " ");
 		if (tkn == NULL || !is_number(tkn))
-			err_push_arg(line_number);
+			err_line(": usage: push integer\n", line_number);
 
 		insert_end(&(manager.stack_head), atoi(tkn));
 		return;
