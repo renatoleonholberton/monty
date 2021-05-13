@@ -2,7 +2,10 @@
 
 extern manager_t manager;
 
-void parse_input_file()
+/**
+ * parse_input_file - Parses the file line by line
+*/
+void parse_input_file(void)
 {
 	int line_number = 1;
 
@@ -10,11 +13,15 @@ void parse_input_file()
 		parse_line(line_number++);
 }
 
+/**
+ * parse_line - Parses each line as monty opcodes
+ * @line_number: Number of instruction line
+*/
 void parse_line(int line_number)
 {
 	int valid_opcode;
 	char *tkn = strtok(manager.buff, "\n");
-	
+
 	tkn = strtok(manager.buff, " ");
 	if (tkn == NULL || *tkn == '\n') /* blank line */
 		return;
@@ -24,7 +31,7 @@ void parse_line(int line_number)
 		tkn = strtok(NULL, " ");
 		if (tkn == NULL || !is_number(tkn))
 			err_push_arg(line_number);
-		
+
 		insert_end(&(manager.stack_head), atoi(tkn));
 		return;
 	}
