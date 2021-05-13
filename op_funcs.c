@@ -1,12 +1,17 @@
 #include "monty.h"
 
+/**
+ * print_all - Prints the values of the stack from top to bottom
+ * @head: Double pointer to head node
+ * @line_number: Number of instruction line
+*/
 void print_all(stack_t **head, unsigned int __attribute__((unused))line_number)
 {
 	stack_t *curr;
 
 	if (head == NULL || *head == NULL)
 		return;
-	
+
 	curr = *head;
 	while (curr->next != NULL)
 		curr = curr->next;
@@ -20,8 +25,8 @@ void print_all(stack_t **head, unsigned int __attribute__((unused))line_number)
 
 /**
  * pint - Prints the value at the top of the stack
- * @stack_tail: Double pointer to the stack's tail
- * @line_number: Number of line instruction
+ * @head: Double pointer to head node
+ * @line_number: Number of instruction line
 */
 void pint(stack_t **head, unsigned int line_number)
 {
@@ -55,7 +60,7 @@ void pop(stack_t **head, unsigned int line_number)
 		*head = NULL;
 		return;
 	}
-		
+
 	for (curr = *head; curr->next != NULL; curr = curr->next)
 		prev = curr;
 
