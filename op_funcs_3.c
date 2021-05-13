@@ -70,7 +70,8 @@ void rotr(stack_t **head, unsigned int __attribute__((unused)) line_number)
 
 	first = *head;
 	*head = first->next;
-	last->next = first;
-	first->prev = last;
+	(*head)->prev = NULL;
 	first->next = NULL;
+	first->prev = last;
+	last->next = first;
 }
