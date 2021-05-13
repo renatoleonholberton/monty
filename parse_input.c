@@ -24,6 +24,9 @@ void parse_line(int line_number)
 	if (tkn == NULL || *tkn == '\n') /* blank line */
 		return;
 
+	if (strcmp(tkn, "nop") == 0)
+		return;
+
 	if (strcmp(tkn, "push") == 0)
 	{
 		tkn = strtok(NULL, " ");
