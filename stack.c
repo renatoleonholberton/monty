@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * insert_end - Inserts a node at the end of the stack
+ * @head: Double pointer to stack's head
+ * @value: Value nu,ber to add to the stack
+*/
 void insert_end(stack_t **head, int value)
 {
 	stack_t *curr;
