@@ -2,6 +2,13 @@
 
 extern manager_t manager;
 
+/**
+ * handle_opcode - Receives an opcode and performs an operation based on it
+ * @opcode: String representing a monty opcode
+ * @line_num: Number of instruction lines
+ *
+ * Return: 1 if the opcode was found, 0 otherwise
+*/
 int handle_opcode(char *opcode, int line_num)
 {
 	int i;
