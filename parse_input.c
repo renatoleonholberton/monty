@@ -52,8 +52,9 @@ void parse_line(int line_number)
 			insert_start(&(manager.stack_head), atoi(tkn));
 		return;
 	}
-
+	/*Validates the operations codes*/
 	valid_opcode = handle_opcode(tkn, line_number);
 	if (!valid_opcode)
 		err_invalid_opcode(tkn, line_number);
 }
+/*end*/
