@@ -20,12 +20,12 @@ void parse_line(int line_number)
 	int valid_opcode;
 	char *tkn = strtok(manager.buff, "\n");
 
-	/* Treat line as a comment if the first char is '#' */
-	if (*tkn == '#')
-		return;
-
 	tkn = strtok(manager.buff, " ");
 	if (tkn == NULL || *tkn == '\n') /* blank line */
+		return;
+
+	/* Treat line as a comment if the first char is '#' */
+	if (*tkn == '#')
 		return;
 
 	if (strcmp(tkn, "nop") == 0)
