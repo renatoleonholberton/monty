@@ -1,10 +1,16 @@
 #include "monty.h"
 
+/**
+ * is_number - Cheks if a string is represented only by numbers
+ * @str: String to be checked
+ *
+ * Return: 1 if str is a number, 0 otherwise
+*/
 int is_number(char *str)
 {
 	if (str == NULL)
 		return (0);
-	
+
 	if (*str == '-' && *(str + 1) != '\0')
 		str++;
 
@@ -18,6 +24,12 @@ int is_number(char *str)
 	return (1);
 }
 
+/**
+ * num_to_str - Converts a number to string
+ * @num: Number to be converted
+ *
+ * Return: Number represented as string
+*/
 char *num_to_str(int num)
 {
 	int num_rev = 0;
