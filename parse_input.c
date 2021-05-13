@@ -8,7 +8,12 @@ void parse_input_file(void)
 	int line_number = 1;
 
 	while (getline(&(manager.buff), &(manager.buff_size), manager.file) != EOF)
+	{
+		/* Treat line as a comment if the firat char is '#' */
+		if ((manager.buff)[0] == '#')
+			continue;
 		parse_line(line_number++);
+	}
 }
 
 /**
