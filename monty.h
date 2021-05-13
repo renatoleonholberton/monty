@@ -38,6 +38,10 @@ typedef struct instruction_s
 
 /**
  * struct manager_s - main stuct to handle all operations
+ * @stack_head: Pointer to the stack's head
+ * @buff: Pointer to Buffer
+ * @buff_size: Length of buffer
+ * @file: Pointer to file struct
  *
  * Description: structure containing all info to manage
  * all operations needed to be performed
@@ -53,7 +57,7 @@ typedef struct manager_s
 } manager_t;
 
 /* parsers */
-void parse_input_file();
+void parse_input_file(void);
 void parse_line(int line_number);
 
 /* functions */
@@ -68,14 +72,14 @@ void pint(stack_t **head, unsigned int line_number);
 void pop(stack_t **head, unsigned int line_number);
 
 /* memory */
-void cleanup();
+void cleanup(void);
 
 /* errors */
-void err_argc();
+void err_argc(void);
 void err_open_file(char *);
 void err_push_arg(int line_number);
 void err_invalid_opcode(char *opcode, int line_number);
-void err_malloc();
+void err_malloc(void);
 /* errors 2 */
 void err_pint(int line_number);
 void err_pop(int line_number);
