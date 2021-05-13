@@ -34,7 +34,7 @@ void parse_line(int line_number)
 		manager.mode = MODE_STACK;
 		return;
 	}
-	else if (strcmp(tkn, "queue") == 0)
+	if (strcmp(tkn, "queue") == 0)
 	{
 		manager.mode = MODE_QUEUE;
 		return;
@@ -46,7 +46,10 @@ void parse_line(int line_number)
 		if (tkn == NULL || !is_number(tkn))
 			err_line(": usage: push integer\n", line_number);
 
-		insert_end(&(manager.stack_head), atoi(tkn));
+		if (manager.mode == MODE_STACK)
+			insert_end(&(manager.stack_head), atoi(tkn));
+		else if (manager.mode == MODE_QUEUE)
+			insert_start(&(manager.stack_head), atoi(tkn));
 		return;
 	}
 

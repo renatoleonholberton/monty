@@ -29,3 +29,29 @@ void insert_end(stack_t **head, int value)
 	curr->next = new_node;
 	new_node->prev = curr;
 }
+
+/**
+ * insert_start - Inserts a node at the beginig of the stack
+ * @head: Double pointer to stack's head
+ * @value: Value nu,ber to add to the stack
+*/
+void insert_start(stack_t **head, int value)
+{
+	stack_t *new_node = malloc(sizeof(stack_t));
+
+	if (new_node == NULL)
+		err_malloc();
+	new_node->n = value;
+	new_node->prev = NULL;
+	new_node->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return;
+	}
+
+	new_node->next = *head;
+	(*head)->prev = new_node;
+	*head = new_node;
+}

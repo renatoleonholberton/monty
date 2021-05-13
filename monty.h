@@ -69,6 +69,7 @@ int handle_opcode(char *opcode, int line_num);
 
 /* stack functions */
 void insert_end(stack_t **head, int value);
+void insert_start(stack_t **head, int value);
 
 /* opcode functions */
 void print_all(stack_t **head, unsigned int line_number);
