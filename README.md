@@ -10,7 +10,7 @@
 | [4. add](https://github.com/renatoleonholberton/monty/blob/main/op_funcs.c) | Implement the add opcode. |
 | [5. nop](https://github.com/renatoleonholberton/monty/blob/main/parse_input.c) | Implement the nop opcode. |
 | Advanced |                         |
-| 6. sub | Implement the sub opcode. |
+| [6. sub](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) Implement the sub opcode. |
 | 7. div | Implement the div opcode. |
 | 8. mul | Implement the mul opcode. |
 | 9. mod | Implement the mod opcode. |
