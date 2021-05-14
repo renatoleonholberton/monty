@@ -22,6 +22,6 @@
 | [15. stack, queue](https://github.com/renatoleonholberton/monty/blob/main/parse_input.c) | Implement the stack and queue opcode. |
 | [16. Holberton](https://github.com/renatoleonholberton/monty/blob/main/bf/1000-holberton.bf) | Write a Brainfuck script that prints Holberton, followed by a new line.. |
 | install brainfuck | sudo apt-get install bf |
-| 17. Add two digits | Add two digits given by the user. |
-| 18. Multiplication | Multiply two digits given by the user. |
+| [17. Add two digits](https://github.com/renatoleonholberton/monty/blob/main/bf/1001-add.bf) | Add two digits given by the user. |
+| [18. Multiplication](https://github.com/renatoleonholberton/monty/blob/main/bf/1001-add.bf) | Multiply two digits given by the user. |
 | 19. Multiplication level up | Multiply two digits given by the user. and print the result, followed by a new line. |
