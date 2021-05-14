@@ -6,7 +6,7 @@
 | [0. push, pall](https://github.com/renatoleonholberton/monty/blob/main/op_funcs.c) |  Implement the push and pall opcodes. |
 | [1. pint](https://github.com/renatoleonholberton/monty/blob/main/op_funcs.c) |  Implement the pint opcode.  |
 | [2. pop](https://github.com/renatoleonholberton/monty/blob/main/op_funcs.c) | Implement the pop opcode. |
-| 3. swap | Implement the swap opcode. |
+| [3. swap](https://github.com/renatoleonholberton/monty/blob/main/op_funcs.c) | Implement the swap opcode. |
 | 4. add | Implement the add opcode. |
 | 5. nop | Implement the nop opcode. |
 | Advanced |                         |
