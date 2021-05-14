@@ -1,4 +1,4 @@
-# 0x19. C - Pilas, Colas - LIFO, FIFO
+# 0x19. C - Stack, Queue - LIFO, FIFO
 
 | Filename |  Description  |
 |----------|:-------------:|
