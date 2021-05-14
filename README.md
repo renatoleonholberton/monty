@@ -19,7 +19,7 @@
 | [12. pstr](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the pstr opcode. |
 | [13. rotl](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the rotl opcode. |
 | [14. rotr](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the rotr opcode. |
-| 15. stack, queue | Implement the stack and queue opcode. |
+| [15. stack, queue](https://github.com/renatoleonholberton/monty/blob/main/parse_input.c) | Implement the stack and queue opcode. |
 | 16. Holberton | Write a Brainfuck script that prints Holberton, followed by a new line.. |
 | install brainfuck | sudo apt-get install bf |
 | 17. Add two digits | Add two digits given by the user. |
