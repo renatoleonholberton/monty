@@ -23,5 +23,5 @@
 | [16. Holberton](https://github.com/renatoleonholberton/monty/blob/main/bf/1000-holberton.bf) | Write a Brainfuck script that prints Holberton, followed by a new line.. |
 | install brainfuck | sudo apt-get install bf |
 | [17. Add two digits](https://github.com/renatoleonholberton/monty/blob/main/bf/1001-add.bf) | Add two digits given by the user. |
-| [18. Multiplication](https://github.com/renatoleonholberton/monty/blob/main/bf/1001-add.bf) | Multiply two digits given by the user. |
-| 19. Multiplication level up | Multiply two digits given by the user. and print the result, followed by a new line. |
+| [18. Multiplication](https://github.com/renatoleonholberton/monty/blob/main/bf/1002-mul.bf) | Multiply two digits given by the user. |
+| [19. Multiplication level up](https://github.com/renatoleonholberton/monty/blob/main/bf/1003-mul.bf) | Multiply two digits given by the user. and print the result, followed by a new line. |
