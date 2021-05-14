@@ -21,3 +21,4 @@
 | 15. stack, queue | Implement the stack and queue opcode. |
 | 16. Holberton | Write a Brainfuck script that prints Holberton, followed by a new line.. |
 | 17. Add two digits | Add two digits given by the user. |
+| 18. Multiplication | Multiply two digits given by the user. |
