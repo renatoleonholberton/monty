@@ -2,6 +2,7 @@
 
 | Filename |  Description  |
 |----------|:-------------:|
+| Compile | gcc -Wall -Werror -Wextra -pedantic *.c -o monty |
 | 0. push, pall |  Implement the push and pall opcodes. |
 | 1. pint |  Implement the pint opcode.  |
 | 2. pop | Implement the pop opcode. |
@@ -20,5 +21,7 @@
 | 14. rotr | Implement the rotr opcode. |
 | 15. stack, queue | Implement the stack and queue opcode. |
 | 16. Holberton | Write a Brainfuck script that prints Holberton, followed by a new line.. |
+| install brainfuck | sudo apt-get install bf |
 | 17. Add two digits | Add two digits given by the user. |
 | 18. Multiplication | Multiply two digits given by the user. |
+| 19. Multiplication level up | Multiply two digits given by the user. and print the result, followed by a new line. |
