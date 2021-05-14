@@ -12,4 +12,6 @@
 | 10. comments | Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (dont do anything). |
 | 11. pchar | Implement the pchar opcode. |
 | 12. pstr | Implement the pstr opcode. |
-| 2. pop | Implement the pop opcode. |
+| 13. rotl | Implement the rotl opcode. |
+| 13. rotr | Implement the rotr opcode. |
+| 13. stack, queue | Implement the stack and queue opcode. |
