@@ -10,6 +10,6 @@
 | 5. nop | Implement the nop opcode. |
 | Advanced |                         |
 | 10. comments | Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (dont do anything). |
-| 2. pop | Implement the pop opcode. |
-| 2. pop | Implement the pop opcode. |
+| 11. pchar | Implement the pchar opcode. |
+| 12. pstr | Implement the pstr opcode. |
 | 2. pop | Implement the pop opcode. |
