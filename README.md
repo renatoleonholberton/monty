@@ -13,5 +13,5 @@
 | 11. pchar | Implement the pchar opcode. |
 | 12. pstr | Implement the pstr opcode. |
 | 13. rotl | Implement the rotl opcode. |
-| 13. rotr | Implement the rotr opcode. |
-| 13. stack, queue | Implement the stack and queue opcode. |
+| 14. rotr | Implement the rotr opcode. |
+| 15. stack, queue | Implement the stack and queue opcode. |
