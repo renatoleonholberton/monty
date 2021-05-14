@@ -12,8 +12,8 @@
 | Advanced |                         |
 | [6. sub](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) |Implement the sub opcode. |
 | [7. div](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) | Implement the div opcode. |
-| 8. mul | Implement the mul opcode. |
-| 9. mod | Implement the mod opcode. |
+| [8. mul](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) | Implement the mul opcode. |
+| [9. mod](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) | Implement the mod opcode. |
 | 10. comments | Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (dont do anything). |
 | 11. pchar | Implement the pchar opcode. |
 | 12. pstr | Implement the pstr opcode. |
