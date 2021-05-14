@@ -2,7 +2,7 @@
 
 | Filename |  Description  |
 |----------|:-------------:|
-| Compile | gcc -Wall -Werror -Wextra -pedantic *.c -o monty |
+| Compile command | gcc -Wall -Werror -Wextra -pedantic *.c -o monty |
 | 0. push, pall |  Implement the push and pall opcodes. |
 | 1. pint |  Implement the pint opcode.  |
 | 2. pop | Implement the pop opcode. |
