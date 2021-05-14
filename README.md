@@ -16,9 +16,9 @@
 | [9. mod](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) | Implement the mod opcode. |
 | 10. comments | Every good language comes with the capability of commenting. When the first non-space character of a line is #, treat this line as a comment (dont do anything). |
 | [11. pchar](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_2.c) | Implement the pchar opcode. |
-| 12. pstr | Implement the pstr opcode. |
-| 13. rotl | Implement the rotl opcode. |
-| 14. rotr | Implement the rotr opcode. |
+| [12. pstr](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the pstr opcode. |
+| [13. rotl](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the rotl opcode. |
+| [14. rotr](https://github.com/renatoleonholberton/monty/blob/main/op_funcs_3.c) | Implement the rotr opcode. |
 | 15. stack, queue | Implement the stack and queue opcode. |
 | 16. Holberton | Write a Brainfuck script that prints Holberton, followed by a new line.. |
 | install brainfuck | sudo apt-get install bf |
