@@ -19,3 +19,5 @@
 | 13. rotl | Implement the rotl opcode. |
 | 14. rotr | Implement the rotr opcode. |
 | 15. stack, queue | Implement the stack and queue opcode. |
+| 16. Holberton | Write a Brainfuck script that prints Holberton, followed by a new line.. |
+| 17. Add two digits | Add two digits given by the user. |
